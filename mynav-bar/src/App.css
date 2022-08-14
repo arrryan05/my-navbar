@@ -38,3 +38,7 @@ body {
   cursor: pointer;
   background-color: #293846;
 }
+
+.SidebarList #active {
+  background-color: #293846;
+}
