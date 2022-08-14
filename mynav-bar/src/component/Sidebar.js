@@ -1,10 +1,27 @@
-import React from 'react';
+import React from "react";
 import "../App.css";
+import { SidebarData } from "./SidebarData";
+
 function Sidebar() {
-    return(
-        <div>
-           this is side bar 
-        </div>
-    )
+  return (
+    <div className="Sidebar">
+      <ul className="SidebarList">
+        {SidebarData.map((val, key) => {
+          return (
+            <li
+              key={key}
+              className="row"
+              onClick={() => {
+                window.location.pathname = val.link;
+              }}
+            >
+              <div>{val.title}</div>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
 }
-export default Sidebar
+
+export default Sidebar;
